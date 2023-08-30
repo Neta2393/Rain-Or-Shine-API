@@ -48,9 +48,9 @@ To install clone the repo at https://github.com/Neta2393/Rain-Or-Shine-API
 
 ## Screenshots
 
-![Alt text](<Screenshot (45).png>)
+![Screenshot (45)](https://github.com/Neta2393/Rain-Or-Shine-API/assets/128006949/bb02052d-d606-4a48-a215-7989a4556fcb)
+![Screenshot (44)](https://github.com/Neta2393/Rain-Or-Shine-API/assets/128006949/6c9394ca-298c-4a34-8a92-114213f7617f)
 
-![Alt text](<Screenshot (44).png>)
 
 ## Sources
 
