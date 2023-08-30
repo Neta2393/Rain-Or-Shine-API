@@ -1,9 +1,11 @@
 # Rain-Or-Shine-API
+
 ![License Badge](https://img.shields.io/badge/license-MIT-green) 
 
 ## Description
 
-The Following repo is a weather dashboard API. When a user types a city into the search bar they are given a 5 day forecast for the weather in that area. The following repo can be found at https://github.com/Neta2393/Rain-Or-Shine-API.
+The Following repo is a weather dashboard API. When a user types a city into the search bar they are given a 5 day forecast for the weather in that area. The following repo can be found at https://github.com/Neta2393/Rain-Or-Shine-API. The live URL can be found at https://neta2393.github.io/Rain-Or-Shine-API/.
+
 
 
 
@@ -12,6 +14,7 @@ The Following repo is a weather dashboard API. When a user types a city into the
   * [Acceptance Criteria](#acceptance-criteria)
   * [Installation](#installation)
   * [Screenshots](#screenshots)
+  * [Sources](#sources)
   * [Contribute](#contribute)
   * [GitHub](#github)
 
@@ -40,16 +43,22 @@ THEN I am again presented with current and future conditions for that city
 
 ## Installation
 
-To install clone the repo at 
+To install clone the repo at https://github.com/Neta2393/Rain-Or-Shine-API
 
 
 ## Screenshots
 
+![Alt text](<Screenshot (45).png>)
 
+![Alt text](<Screenshot (44).png>)
 
+## Sources
 
+https://openweathermap.org/api
 
+https://dev.to/incoderweb/create-a-weather-app-with-html-css-and-javascript-22h8
 
+https://stackoverflow.com/questions/26046474/celsius-and-fahrenheit-converter-javascript
 
 
 ## Contribute
