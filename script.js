@@ -84,4 +84,17 @@ function searchWeather() {
   }
 }
 
+function initialize() {
+  const initialCity = "Oceanside"; 
+  getWeatherForecast(initialCity)
+    .then(forecastData => {
+      updateWeatherForecast(forecastData);
+    })
+    .catch(error => {
+      console.error("Error fetching initial weather:", error);
+    });
+}
+
 document.getElementById("search-button").addEventListener("click", searchWeather);
+
+window.onload = initialize;
