@@ -1,4 +1,4 @@
-// script.js
+//The code below is the apiKey that I was given from the open weather app
 
 const apiKey = "5a9aafa6dd5712de098327d4a402571c";
 
@@ -11,7 +11,7 @@ async function getWeatherForecast(city) {
     console.error("Error fetching weather forecast:", error);
   }
 }
-
+//The lines of code below convert the celsius to fahrenheit. I was having issues trying to read the weather in celsius and found a code to convert 
 function celsiusToFahrenheit(celsius) {
   return (celsius * 9/5) + 32;
 }
@@ -20,7 +20,7 @@ function updateWeatherForecast(forecastData) {
   const weatherForecast = document.getElementById("weather-forecast");
   let forecastHTML = "<h2>5-Day Weather Forecast</h2>";
 
-  // Group forecast data by day
+  //The code below groups forecast data by day
   const groupedForecast = {};
 
   forecastData.list.forEach(item => {
@@ -40,7 +40,7 @@ function updateWeatherForecast(forecastData) {
     });
   });
 
-  // Create cards for each day
+  // The code below Creates cards for each day
   for (const day in groupedForecast) {
     forecastHTML += `
       <div class="forecast-day">
@@ -83,7 +83,7 @@ function searchWeather() {
       });
   }
 }
-
+//the code below displays the initial city that will be displayed when the page is opened. I chose Oceanside beacause its close to where I am and more well known
 function initialize() {
   const initialCity = "Oceanside"; 
   getWeatherForecast(initialCity)
