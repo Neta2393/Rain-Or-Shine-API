@@ -1,4 +1,4 @@
-//The code below is the apiKey that I was given from the open weather app
+
 
 const apiKey = "5a9aafa6dd5712de098327d4a402571c";
 
@@ -11,16 +11,16 @@ async function getWeatherForecast(city) {
     console.error("Error fetching weather forecast:", error);
   }
 }
-//The lines of code below convert the celsius to fahrenheit. I was having issues trying to read the weather in celsius and found a code to convert 
+
 function celsiusToFahrenheit(celsius) {
   return (celsius * 9/5) + 32;
 }
 
 function updateWeatherForecast(forecastData) {
   const weatherForecast = document.getElementById("weather-forecast");
-  let forecastHTML = "<h2>5-Day Weather Forecast</h2>";
+  let forecastHTML = `<h2>${forecastData.city.name} 5-Day Weather Forecast</h2>`;
 
-  //The code below groups forecast data by day
+  // Group forecast data by day
   const groupedForecast = {};
 
   forecastData.list.forEach(item => {
@@ -36,11 +36,12 @@ function updateWeatherForecast(forecastData) {
       temperatureCelsius: item.main.temp,
       temperatureFahrenheit: celsiusToFahrenheit(item.main.temp),
       weatherDescription: item.weather[0].description,
-      iconCode: item.weather[0].icon
+      iconCode: item.weather[0].icon,
+      windSpeed: item.wind.speed // Wind speed in meters per second
     });
   });
 
-  // The code below Creates cards for each day
+  // Create cards for each day
   for (const day in groupedForecast) {
     forecastHTML += `
       <div class="forecast-day">
@@ -55,7 +56,9 @@ function updateWeatherForecast(forecastData) {
           <p class="forecast-time">${item.time}</p>
           <img src="${iconUrl}" alt="${item.weatherDescription}">
           <p class="forecast-temperature">${item.temperatureFahrenheit}°F</p>
+          <p class="forecast-wind">Wind Speed: ${item.windSpeed} m/s</p>
           <p class="forecast-description">${item.weatherDescription}</p>
+          <p class="forecast-city">${forecastData.city.name}</p>
         </div>
       `;
     });
@@ -83,7 +86,7 @@ function searchWeather() {
       });
   }
 }
-//the code below displays the initial city that will be displayed when the page is opened. I chose Oceanside beacause its close to where I am and more well known
+
 function initialize() {
   const initialCity = "Oceanside"; 
   getWeatherForecast(initialCity)
